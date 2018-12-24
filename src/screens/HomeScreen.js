@@ -20,9 +20,16 @@ export default class HomeScreen extends React.Component {
         <View style={{ marginBottom: 10 }}>
           <Button title="Show me more of the app" onPress={this._showMoreApp} />
         </View>
+        <View style={{ marginBottom: 10 }}>
+          <Button title="Go to Profile" onPress={this._showProfile} />
+        </View>
         <Button title="Actually, sign me out :)" onPress={this._signOutAsync} />
       </View>
     );
+  }
+
+  _showProfile = () => {
+    this.props.navigation.navigate("Profile");
   }
 
   _showMoreApp = () => {
